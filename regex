@@ -1,1 +1,18 @@
-asdfass
+正则表达式：字符串搜索匹配工具
+
+preg_match
+
+preg_match_all
+
+preg_replace
+
+preg_filter
+
+preg_grep
+
+preg_split
+
+preg_q
+
+$pattern 正则表达式 
+$subject 匹配结果
