@@ -1,0 +1,2 @@
+git remote add origin https://github.com/cailinhan/txt.git
+linhan@my-pc:~/txt$ git push -u origin master
