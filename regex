@@ -1,18 +1,61 @@
 正则表达式：字符串搜索匹配工具
 
-preg_match
+preg_match($pattern,$subject,[array &$matches])
+返回值为匹配到的次数[0,1]
+preg_match_all($pattern,$subject,array &$matches)
+返回值为匹配到的次数[0,+oo]
+preg_replace($pattern, $replacement, $subject);
+结果保留全部
+preg_filter($pattern, $replacement, $subject);
+结果保留替换过的
+preg_grep($pattern, array $input);
+只匹配，不替换
 
-preg_match_all
+preg_split($pattern, $subject);
+explode的升级版，使用正则作为分割符
 
-preg_replace
-
-preg_filter
-
-preg_grep
-
-preg_split
-
-preg_q
+preg_quote($str)
+正则运算符转义
 
 $pattern 正则表达式 
 $subject 匹配结果
+$matches
+
+正则表达式：语法
+
+界定符： 开始和结束位置 
+	/[0-9]/
+	#[0-9]#
+	{[0-9]}
+	in php;
+原子：unicode中的一个字符
+	双字节等可能由于编码问题造成匹配失败。汉字转unicode，然后匹配
+	\$
+	\\
+	空格符 ' ';
+	制表符 '\t';
+	回车符 '\n';
+	原子的筛选方式
+		|	或
+		[]	匹配方括号中的任意一个原子
+		[^]	匹配方括号以外的任意原子
+	原子集合
+		.  换行符以外等任意字符
+		\d 十进制数字
+		\D 非十进制数字
+		\s 不可见原子 \f\n\r\t\v
+		\S 任何可见原子
+		\w 数字、字母、下划线
+		\W 非（数字、字母、下环线）
+量词：
+	{n}
+	{n,}
+	{n,m}
+	*{0,}
+	+{1,}
+	?{0,1}
+边界控制：
+	^ $
+模式单元：括号里面的内容当作一个原子
+	()
+regexpal
