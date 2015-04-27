@@ -1,0 +1,29 @@
+mysql> SELECT * FROM `thl_v_deposit_report` ORDER BY add_time desc LIMIT 0,100;
+
+
+
+创建用户
+    CREATE USER 'username'@'host' IDENTIFIED BY 'password'; 
+超级管理员全乡
+    GRANT all ON *.* TO linhan IDENTIFIED BY 'cailinhan' WITH GRANT OPTION;
+一般的web应用权限权
+    GRANT SELECT, INSERT, UPDATE, DELETE
+    ON *.*
+    TO webuser IDENTIFIED BY 'cailinhan'
+刷新权限表
+    flush privileges 
+	
+	
+	
+	
+	
+时间日期 
+	处理
+	date_format();
+add_time >= date_format('2014-07-07 00:00:00','%Y-%m-%d %H:%i:%s')  and add_time <= date_format('2015-10-09 23:59:59','%Y-%m-%d %H:%i:%s') 
+
+ERROR 1356 (HY000): View 'dbtest.thl_v_deposit_report' references invalid table(
+s) or column(s) or function(s) or definer/invoker of view lack rights to use the
+m
+
+查看视图权限
