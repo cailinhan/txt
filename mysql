@@ -4,8 +4,10 @@ mysql> SELECT * FROM `thl_v_deposit_report` ORDER BY add_time desc LIMIT 0,100;
 
 创建用户
     CREATE USER 'username'@'host' IDENTIFIED BY 'password'; 
-超级管理员全乡
-    GRANT all ON *.* TO linhan IDENTIFIED BY 'cailinhan' WITH GRANT OPTION;
+超级本地管理员权限
+    GRANT all ON *.* TO 'linhan'@'localhost' IDENTIFIED BY 'cailinhan' WITH GRANT OPTION;
+超级远程管理员权限
+    GRANT all ON *.* TO 'linhan'@'%' IDENTIFIED BY 'cailinhan' WITH GRANT OPTION;
 一般的web应用权限权
     GRANT SELECT, INSERT, UPDATE, DELETE
     ON *.*
